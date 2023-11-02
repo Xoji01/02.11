@@ -1,7 +1,17 @@
-function dlName (a,b,c){
-    let name = [a,b,c]
-    let dlName = name.reduce((a, b) => (b.length > a.length) ? b : a) 
-    return dlName
-  };
-  let maxname = dlName('Alex', 'George', 'Michael') 
-  console.log(maxname);
+const getLongestName = (isMax, ...names) => {
+  let dlname = []
+  let korotName = names[0]
+
+  if (isMax) {
+      for (let i = 0; i < names.length; i++) {
+          if (names[i].length > dlname.length) {
+              dlname = names[i];
+          }
+      }
+      return dlname;
+  } else {
+      return korotName
+  }
+}
+
+console.log(getLongestName(false, 'alex', 'jasur'), (getLongestName(true, 'alex', 'jasur')));
