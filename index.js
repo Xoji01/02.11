@@ -1,3 +1,4 @@
+let names = []
 const getLongestName = (isMax, ...names) => {
   let dlname = []
   let korotName = names[0]
