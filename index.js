@@ -15,4 +15,11 @@ const getLongestName = (isMax, ...names) => {
   }
 }
 
-console.log(getLongestName(false, 'alex', 'jasur'), (getLongestName(true, 'alex', 'jasur')));
+console.log(getLongestName(false, 'alex',  'jasur'), (getLongestName(true, 'alex', 'jasur')));
+function dlName (a,b){
+    let imya = [a,b]
+    let dlImya =  imya.reduce((a, b) => (b.length > a.length) ? b : a) 
+    return dlImya
+  };
+  let maxIm = dlName('alex', 'jasur') 
+  console.log(maxIm);
